@@ -1,0 +1,10 @@
+@import 'var';
+@import 'mixin';
+@import 'settings';
+
+.page {
+  &__header {
+    @include flex();
+    height: 100vh;
+  }
+}
