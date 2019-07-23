@@ -12,10 +12,12 @@
   }
 }
 
-@mixin absolute($top: 0, $left: 0) {
+@mixin pos($top: 0, $left: 0, $right: null, $bottom: null) {
   position: absolute;
   top: $top;
   left: $left;
+  right: $right;
+  bottom: $bottom;
 }
 
 @mixin flex($justify-content: center, $align-items: center) {
