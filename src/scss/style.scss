@@ -20,6 +20,17 @@
   }
 }
 
+.logo {
+  @include pos(17px, 14px);
+  font-family: $headers-font;
+  font-size: 1.9rem;
+
+  &__word-simple {
+    display: inline-block;
+    transform: rotate(-35deg);
+  }
+}
+
 #hamburgerBtn {
   @include pos(14px, auto, 14px);
   outline: none !important;
@@ -29,16 +40,9 @@
   display: none;
 }
 
-.self-presentation-container {
-  font-size: 2rem;
-
-  &__title {
-    font-family: $headers-font;
-  }
-
-  &__subtitle {
-    font-size: 1.2em;
-  }
+.about-me-container {
+  font-size: 1.7rem;
+  letter-spacing: 2px;
 }
 
 .scroll-down-btn {
