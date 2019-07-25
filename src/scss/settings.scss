@@ -14,8 +14,6 @@ html {
 }
 
 body {
-  font-family: 'Limelight', Verdana, sans-serif;
-  text-align: center;
-  color: $header-text-color;
-  background-color: darkcyan;
+  font-family: $default-font;
+  color: $headers-text-color;
 }

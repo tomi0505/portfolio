@@ -1,6 +1,7 @@
 @import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
 @import 'var';
 @import 'mixin';
+@import 'keyframes';
 @import 'settings';
 
 .page {
@@ -9,6 +10,7 @@
     flex-direction: column;
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
+    text-align: center;
     background-image: url('../img/bg0.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,24 +32,25 @@
 .self-presentation-container {
   font-size: 2rem;
 
+  &__title {
+    font-family: $headers-font;
+  }
+
   &__subtitle {
     font-size: 1.2em;
   }
 }
 
-.slide-down-btn {
+.scroll-down-btn {
   margin: 15px;
   display: block;
   width: 40px;
   height: 40px;
+  animation: bounce 2s infinite;
   cursor: pointer;
 
   &__svg-item {
     height: 100%;
-    color: $header-text-color;
-
-    &:hover {
-      opacity: .7;
-    }
+    color: $headers-text-color;
   }
 }
