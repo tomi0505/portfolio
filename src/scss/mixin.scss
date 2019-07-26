@@ -12,8 +12,8 @@
   }
 }
 
-@mixin pos($top: 0, $left: 0, $right: null, $bottom: null) {
-  position: absolute;
+@mixin pos($position: absolute, $top: 0, $left: 0, $right: null, $bottom: null) {
+  position: $position;
   top: $top;
   left: $left;
   right: $right;
