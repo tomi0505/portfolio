@@ -5,37 +5,47 @@
 
 .page {
   &__header {
-    @include flex(space-between);
+    @include flex();
     flex-direction: column;
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
+    font-size: 2.1rem;
     text-align: center;
-    background-image: url('../img/bg0.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    box-shadow: inset 0 0 0 1000px rgba(67,65,84,.8);
+    color: $white;
+    background-color: #252934;
     overflow: hidden;
   }
+}
 
-  &__nav {
-    padding: 20px 29px;
-    @include pos(fixed);
-    @include flex(space-between);
-    width: 100%;
+.self-presentation {
+  line-height: 53px;
+
+  &__view-my-works-btn {
+    @include reset(button);
+    margin-top: 29px;
+    padding: 11px;
+    font-family: $page-initial-font;
+    font-size: 1.2rem;
+    color: $white;
+    border: 1px solid $white;
+    cursor: pointer;
+
+    &:hover::after {
+      transform: rotate(90deg);
+    }
+
+    &::after {
+      content: url("../img/svg/arrow-right.svg");
+      margin-left: 9px;
+      display: inline-block;
+      width: 0.7em;
+      transition: .4s;
+    }
   }
 }
 
-.logo {
-  font-family: $headers-font;
-  font-size: 1.9rem;
-  line-height: 1.9rem;
 
-  &__word-simple {
-    display: inline-block;
-    transform: rotate(-35deg);
-  }
-}
+
 
 .hamburger-btn {
   @include reset(button);
@@ -82,36 +92,5 @@
         transform: rotate(-35deg);
       }
     }
-  }
-}
-
-.main-menu {
-  display: none;
-}
-
-.about-me-container {
-  margin: auto 0;
-  font-size: 1.7rem;
-  line-height: 45px;
-  letter-spacing: 2px;
-
-  & > * {
-    &:nth-child(2),
-    &:nth-child(4) {
-      margin-bottom: 19px;
-    }
-  }
-}
-
-.scroll-down-btn {
-  margin: 15px;
-  display: block;
-  animation: bounce 2s infinite;
-  cursor: pointer;
-
-  &__svg-item {
-    width: 25px;
-    height: 35px;
-    color: $headers-text-color;
   }
 }

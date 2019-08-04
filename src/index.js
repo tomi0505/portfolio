@@ -9,5 +9,5 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('resize', chromeMobile100Vh, false);
   scrollToAnchor();
   hamburgerBtn();
-  aboutMeTypingText();
+  // aboutMeTypingText();
 }, false);
