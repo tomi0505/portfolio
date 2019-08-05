@@ -3,23 +3,73 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
     <title>Tomasz Grzyb | Junior Front End Developer</title>
   </head>
-  <body class="page">
-    <header class="page__header">
+  <body>
+    <header class="header">
       <div class="self-presentation">
-        <p>Cześć, nazywam się Tomasz Grzyb.</p>
+        <p>Cześć, nazywam się <span class="self-presentation__awarded">Tomasz Grzyb</span>.</p>
         <p>Jestem Junior Front-End Developer-em.</p>
-        <button class="self-presentation__view-my-works-btn">Zobacz moje prace</button>
+        <a href="#aboutMe" class="view-my-works-btn scroll" role="button">Zobacz moje prace</a>
       </div>
     </header>
-    <main id="main">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cumque, debitis doloremque fugit illo maxime
-      molestias nisi nobis numquam perferendis quas quibusdam quos velit vero, voluptatem. At nesciunt officia qui.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto natus quam voluptates! Aliquam,
-      dolorem dolorum eaque expedita hic in iste itaque laboriosam modi pariatur perferendis perspiciatis rerum tempore
-      vero.
+    <main>
+      <section class="section" id="aboutMe">
+        <h2 class="section__title">O MNIE</h2>
+        <div class="section__row">
+          <figure class="information-about-me">
+            <img src="src/img/tg.png" class="information-about-me__author-photo" alt="Tomasz Grzyb">
+            <figcaption class="information-about-me__description-photo">Cześć, nazywam się Tomasz Grzyb. Jestem absolwentem Technikum Informatycznego. Moją pasją jest tworzenie stron internetowych. Od 2017 roku rozwijam swoje Front-End-owe umiejętności (HTML5, CSS3, JS ES6, RWD, BEM, Sass, cięcie layout-ów).</figcaption>
+          </figure>
+          <div class="skills-container">
+            <div class="bar">
+              <label for="skillsHTMLProgressBarItem" class="bar__name">HTML5</label>
+              <progress value="1" max="100" class="bar__progress" id="skillsHTMLProgressBarItem">alternatywa</progress>
+            </div>
+            <div class="bar">
+              <label for="skillsCSSProgressBarItem" class="bar__name">CSS3</label>
+              <progress value="1" max="100" class="bar__progress" id="skillsCSSProgressBarItem">alternatywa</progress>
+            </div>
+            <div class="bar">
+              <label for="skillsJSProgressBarItem" class="bar__name">JAVASCRIPT ES6+</label>
+              <progress value="1" max="100" class="bar__progress" id="skillsJSProgressBarItem">alternatywa</progress>
+            </div>
+            <div class="bar">
+              <label for="skillsRWDProgressBarItem" class="bar__name">RWD</label>
+              <progress value="1" max="100" class="bar__progress" id="skillsRWDProgressBarItem">alternatywa</progress>
+            </div>
+            <div class="bar">
+              <label for="skillsPSProgressBarItem" class="bar__name">PHOTOSHOP</label>
+              <progress value="1" max="100" class="bar__progress" id="skillsPSProgressBarItem">alternatywa</progress>
+            </div>
+            <div class="bar">
+              <label for="skillsBEMProgressBarItem" class="bar__name">BEM</label>
+              <progress value="1" max="100" class="bar__progress" id="skillsBEMProgressBarItem">alternatywa</progress>
+            </div>
+            <div class="bar">
+              <label for="skillsSASSProgressBarItem" class="bar__name">SASS</label>
+              <progress value="1" max="100" class="bar__progress" id="skillsSASSProgressBarItem">alternatywa</progress>
+            </div>
+            <div class="bar">
+              <label for="skillsGITProgressBarItem" class="bar__name">GIT</label>
+              <progress value="1" max="100" class="bar__progress" id="skillsGITProgressBarItem">alternatywa</progress>
+            </div>
+            <div class="bar">
+              <label for="skillsWEBPACKProgressBarItem" class="bar__name">WEBPACK/GULP</label>
+              <progress value="1" max="100" class="bar__progress" id="skillsWEBPACKProgressBarItem">alternatywa</progress>
+            </div>
+            <div class="bar">
+              <label for="skillsBOOTSTRAProgressBarItem" class="bar__name">BOOTSTRAP</label>
+              <progress value="1" max="100" class="bar__progress" id="skillsBOOTSTRAProgressBarItem">alternatywa</progress>
+            </div>
+            <div class="bar">
+              <label for="skillsREACTProgressBarItem" class="bar__name">REACT</label>
+              <progress value="1" max="100" class="bar__progress" id="skillsREACTProgressBarItem">alternatywa</progress>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>

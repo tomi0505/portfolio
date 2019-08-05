@@ -46,7 +46,7 @@
 @mixin reset($tag) {
   @if $tag == a {
       text-decoration: none;
-  } @else if $tag == button {
+  } @else if $tag == btn {
       border: none;
       background-color: transparent;
   } @else if $tag == inputText {
