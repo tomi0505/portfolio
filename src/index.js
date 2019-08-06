@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   chromeMobile100Vh();
   window.addEventListener('resize', chromeMobile100Vh, false);
   scrollToAnchor();
-
   slideAnimation();
   slideToCenterAnimation();
 }, false);

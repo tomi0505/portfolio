@@ -1,13 +1,15 @@
 import setSkillsBarsValue from "./setSkillsBarsValue";
 
 const slideAnimation = function() {
-  const sectionTitleEl = document.querySelector('#aboutMe .section__title');
+  const sectionsTitleEl = document.querySelectorAll('.main-section-title');
 
   const startSlideLeftAnimation = () => {
-    const sectionTitleElRect = sectionTitleEl.getBoundingClientRect();
+    for(let sectionTitleElItem of sectionsTitleEl) {
+      const sectionTitleElItemRect = sectionTitleElItem.getBoundingClientRect();
 
-    if(sectionTitleElRect.top < 769) {
-      sectionTitleEl.classList.add('animate-to-visible');
+      if(sectionTitleElItemRect.top < 769) {
+        sectionTitleElItem.classList.add('animate-to-visible');
+      }
     }
   };
 
@@ -16,7 +18,7 @@ const slideAnimation = function() {
   window.addEventListener('scroll', function() {
     startSlideLeftAnimation();
   }, false);
-}
+};
 
 const slideToCenterAnimation = function() {
   const informationAboutMeEl = document.querySelector('.information-about-me');
@@ -44,7 +46,7 @@ const slideToCenterAnimation = function() {
   window.addEventListener('scroll', function() {
     startslideToCenterAnimation();
   }, false);
-}
+};
 
 export default slideAnimation;
 export { slideToCenterAnimation };
