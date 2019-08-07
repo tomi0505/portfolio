@@ -167,7 +167,8 @@
 }
 
 .portfolio-project {
-  @include flex(space-between);
+  @include flex(space-between, stretch);
+  align-content: center;
   flex-wrap: wrap;
 
   &:nth-child(even) {
@@ -179,6 +180,14 @@
     flex-basis: 474px;
     max-width: 552px;
     flex-grow: 1;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: .4s ease-in-out;
+
+    &.animate-to-visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   &__img {
@@ -187,6 +196,7 @@
 
   &__description-container {
     @extend .portfolio-project__img-container;
+    opacity: 1;
   }
 
   &__title {
