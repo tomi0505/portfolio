@@ -22,7 +22,6 @@
 
 @mixin flex($justify-content: center, $align-items: center) {
   display: flex;
-  flex-wrap: wrap;
   justify-content: $justify-content;
   align-items: $align-items;
 }
