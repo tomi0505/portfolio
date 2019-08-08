@@ -71,7 +71,7 @@
         </div>
       </section>
       <section class="portfolio" id="portfolio">
-        <h2 class="main-section-title">PORTFOLIO</h2>
+        <h2 class="main-section-title main-section-title--less-mb">PORTFOLIO</h2>
         <div class="portfolio-projects-container">
           <section class="portfolio-project">
             <div class="portfolio-project__img-container">
@@ -154,7 +154,17 @@
         </div>
       </section>
       <section class="contact" id="contact">
-        <h2 class="main-section-title">KONTAKT</h2>
+        <h2 class="main-section-title main-section-title--medium-mb">KONTAKT</h2>
+        <form action="#" class="send-message-form">
+          <div class="send-message-form__row">
+            <input type="text" name="userName" class="send-message-form__user-name-input" placeholder="Imię">
+            <input type="email" name="userEmail" class="send-message-form__user-email-input" placeholder="E-mail">
+          </div>
+          <div class="send-message-form__row">
+            <textarea name="userMessage" cols="30" rows="10" class="send-message-form__user-message-input">Wiadomość...</textarea>
+            <button class="send-message-form__send-message-btn">Wyślij</button>
+          </div>
+        </form>
       </section>
     </main>
   </body>

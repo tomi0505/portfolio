@@ -48,6 +48,7 @@
   } @else if $tag == btn {
       border: none;
       background-color: transparent;
+      cursor: pointer;
   } @else if $tag == inputText {
       border: none;
       background-color: transparent;

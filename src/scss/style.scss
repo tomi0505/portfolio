@@ -44,11 +44,15 @@
 }
 
 //II. ABOUT-ME
-.about-me {
+%basic-section-css {
   margin: 0 auto;
-  padding: 30px 0;
+  padding-top: 30px;
   max-width: 1366px;
   overflow: hidden;
+}
+
+.about-me {
+  @extend %basic-section-css;
 
   &__row {
     @include flex(space-between, flex-start);
@@ -70,6 +74,14 @@
   opacity: 0;
   transform: translateX(-100px);
   transition: .7s ease-in-out;
+
+  &--less-mb {
+    margin-bottom: 45px;
+  }
+
+  &--medium-mb {
+    margin-bottom: 40px;
+  }
 
   &::after {
     content: "";
@@ -165,9 +177,8 @@
 }
 
 //III. PORTFOLIO
-.portfolio-projects-container {
-  margin: 0 auto;
-  max-width: 1366px;
+.portfolio {
+  @extend %basic-section-css;
 }
 
 .portfolio-project {
@@ -183,7 +194,7 @@
   }
 
   &__img-container {
-    margin: 25px;
+    margin: 30px;
     flex-basis: 474px;
     max-width: 552px;
     flex-grow: 1;
@@ -202,7 +213,7 @@
   }
 
   &__description-container {
-    margin: 25px;
+    margin: 30px;
     flex-basis: 474px;
     max-width: 552px;
     flex-grow: 1;
@@ -227,7 +238,6 @@
     font-weight: 300;
     text-decoration: none;
     border: 1px solid $black;
-    border-radius: 5px;
     background-color: $black;
     transition: .2s;
 
@@ -235,5 +245,48 @@
       color: $black;
       background-color: transparent;
     }
+  }
+}
+
+//IV. CONTACT
+.contact {
+  @extend %basic-section-css;
+}
+
+.send-message-form {
+  @include flex(center, flex-start);
+
+  &__row {
+    margin: 25px 15px;
+    flex-basis: 474px;
+    max-width: 552px;
+    flex-grow: 1;
+  }
+
+  &__user-name-input,
+  &__user-email-input {
+    @include reset(inputText);
+    margin: 10px 0;
+    padding: 17px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    border: 1px solid $black;
+  }
+
+  &__user-message-input {
+    @include reset(inputText);
+    margin: 10px 0;
+    padding: 17px;
+    width: 100%;
+    border: 1px solid $black;
+  }
+
+  &__send-message-btn {
+    @include reset(btn);
+    margin: 10px 0 10px auto;
+    padding: 7px 15px;
+    display: block;
+    border: 1px solid $black;
   }
 }
