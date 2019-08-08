@@ -5,7 +5,7 @@ const slideToTopAnimation = function() {
     for(let portfolioProjectImgContainerElItem of portfolioProjectsImgsContainerEl) {
       const portfolioProjectImgContainerElItemRect = portfolioProjectImgContainerElItem.getBoundingClientRect();
 
-      if(portfolioProjectImgContainerElItemRect.top < window.innerHeight) {
+      if(portfolioProjectImgContainerElItemRect.top < window.innerHeight - portfolioProjectImgContainerElItemRect.height/2) {
         portfolioProjectImgContainerElItem.classList.add('animate-to-visible');
       }
     }

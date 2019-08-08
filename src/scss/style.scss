@@ -171,8 +171,7 @@
 }
 
 .portfolio-project {
-  @include flex(space-between, stretch);
-  align-content: center;
+  @include flex(space-between);
   flex-wrap: wrap;
 
   &:nth-child(even) {
@@ -203,12 +202,11 @@
   }
 
   &__description-container {
-    @extend .portfolio-project__img-container;
-    opacity: 1;
-
-    @include rwd(1047px) {
-      transform: translateY(0);
-    }
+    margin: 25px;
+    flex-basis: 474px;
+    max-width: 552px;
+    flex-grow: 1;
+    transition: .4s ease-in-out;
   }
 
   &__title {
