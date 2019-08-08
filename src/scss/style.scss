@@ -53,6 +53,10 @@
   &__row {
     @include flex(space-between, flex-start);
     flex-wrap: wrap;
+
+    @include rwd(1047px) {
+      justify-content: center;
+    }
   }
 }
 
@@ -175,6 +179,10 @@
     flex-direction: row-reverse;
   }
 
+  @include rwd(1047px) {
+    justify-content: center;
+  }
+
   &__img-container {
     margin: 25px;
     flex-basis: 474px;
@@ -197,6 +205,10 @@
   &__description-container {
     @extend .portfolio-project__img-container;
     opacity: 1;
+
+    @include rwd(1047px) {
+      transform: translateY(0);
+    }
   }
 
   &__title {

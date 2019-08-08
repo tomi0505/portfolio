@@ -8,11 +8,11 @@ const slideToCenterAnimation = function() {
     const informationAboutMeElRect = informationAboutMeEl.getBoundingClientRect();
     const skillsContainerElRect = skillsContainerEl.getBoundingClientRect();
 
-    if(informationAboutMeElRect.top < 610) {
+    if(informationAboutMeElRect.top < window.innerHeight - informationAboutMeElRect.height/2) {
       informationAboutMeEl.classList.add('animate-to-visible');
     }
 
-    if(skillsContainerElRect.top < 610) {
+    if(skillsContainerElRect.top < window.innerHeight - informationAboutMeElRect.height/2) {
       skillsContainerEl.classList.add('animate-to-visible');
 
       setTimeout(() => {

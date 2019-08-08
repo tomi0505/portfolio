@@ -5,7 +5,7 @@ const slideToLeftAnimation = function() {
     for(let sectionTitleElItem of sectionsTitleEl) {
       const sectionTitleElItemRect = sectionTitleElItem.getBoundingClientRect();
 
-      if(sectionTitleElItemRect.top < 769) {
+      if(sectionTitleElItemRect.top < window.innerHeight - sectionTitleElItemRect.height) {
         sectionTitleElItem.classList.add('animate-to-visible');
       }
     }
