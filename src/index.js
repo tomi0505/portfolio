@@ -4,6 +4,7 @@ import scrollToAnchor from "./js/scrollToAnchor";
 import slideToLeftAnimation from "./js/slideToLeftAnimation";
 import slideToCenterAnimation from "./js/slideToCenterAnimation";
 import slideToTopAnimation from "./js/slideToTopAnimation";
+import sendEmail from "./js/sendEmail";
 
 document.addEventListener("DOMContentLoaded", () => {
   chromeMobile100Vh();
@@ -12,4 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
   slideToLeftAnimation();
   slideToCenterAnimation();
   slideToTopAnimation();
+  sendEmail();
 }, false);

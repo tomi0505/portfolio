@@ -155,13 +155,16 @@
       </section>
       <section class="contact" id="contact">
         <h2 class="main-section-title main-section-title--medium-mb">KONTAKT</h2>
-        <form action="#" class="send-message-form">
+        <form action="http://tomi0505.kylos.pl/portfNext/php/send-email.php" class="send-message-form" novalidate method="POST">
           <div class="send-message-form__row">
-            <input type="text" name="userName" class="send-message-form__user-name-input" placeholder="Imię">
-            <input type="email" name="userEmail" class="send-message-form__user-email-input" placeholder="E-mail">
+            <input type="text" name="user-name" class="send-message-form__user-name-input" placeholder="Imię">
+            <span class="error-validate-input-message">To pole zostało wypełnione nieprawidłowo.</span>
+            <input type="email" name="user-email" class="send-message-form__user-email-input" placeholder="E-mail">
+            <span class="error-validate-input-message">To pole zostało wypełnione nieprawidłowo.</span>
           </div>
           <div class="send-message-form__row">
-            <textarea name="userMessage" cols="30" rows="10" class="send-message-form__user-message-input">Wiadomość...</textarea>
+            <textarea name="user-message" cols="30" rows="10" class="send-message-form__user-message-input" placeholder="Wiadomość..."></textarea>
+            <span class="error-validate-input-message">To pole zostało wypełnione nieprawidłowo.</span>
             <button class="send-message-form__send-message-btn">Wyślij</button>
           </div>
         </form>

@@ -44,7 +44,7 @@
 }
 
 //II. ABOUT-ME
-%basic-section-css {
+%simple-section-template-css {
   margin: 0 auto;
   padding-top: 30px;
   max-width: 1366px;
@@ -52,7 +52,7 @@
 }
 
 .about-me {
-  @extend %basic-section-css;
+  @extend %simple-section-template-css;
 
   &__row {
     @include flex(space-between, flex-start);
@@ -178,7 +178,7 @@
 
 //III. PORTFOLIO
 .portfolio {
-  @extend %basic-section-css;
+  @extend %simple-section-template-css;
 }
 
 .portfolio-project {
@@ -250,7 +250,7 @@
 
 //IV. CONTACT
 .contact {
-  @extend %basic-section-css;
+  @extend %simple-section-template-css;
 }
 
 .send-message-form {
@@ -281,25 +281,32 @@
     }
   }
 
-  &__user-name-input,
-  &__user-email-input {
+  %input-item-template-css {
     @include reset(inputText);
     margin: 10px 0;
     padding: 17px;
-    display: block;
     width: 100%;
-    height: 30px;
     font-size: 0.9rem;
     border: 1px solid $black;
+
+    &.error-validate {
+      border-color: $red;
+
+      &+.error-validate-input-message {
+        display: block;
+      }
+    }
+  }
+
+  &__user-name-input,
+  &__user-email-input {
+    @extend %input-item-template-css;
+    display: block;
+    height: 30px;
   }
 
   &__user-message-input {
-    @include reset(inputText);
-    margin: 10px 0;
-    padding: 17px;
-    width: 100%;
-    font-size: 0.9rem;
-    border: 1px solid $black;
+    @extend %input-item-template-css;
 
     @include rwd(1047px) {
       @include my();
@@ -314,6 +321,13 @@
     font-size: 0.9rem;
     border: 1px solid $black;
   }
+}
+
+.error-validate-input-message {
+  display: none;
+  font-size: 0.9rem;
+  color: $red;
+  text-align: left;
 }
 
 //V. FOOTER
@@ -337,12 +351,14 @@
 
 .arrow-top-icon {
   margin-top: 17px;
-  width: 21px;
+  width: 17px;
   color: $white;
 }
 
 .copyright {
   margin-top: 17px;
+  font-size: 0.9rem;
+  font-style: normal;
 
   &__copy,
   &__author,
