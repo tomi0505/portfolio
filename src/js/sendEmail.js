@@ -12,7 +12,7 @@ const sendEmail = function() {
         inputItem.classList.add('error-validate');
       } else {
         if(inputItem.classList.contains('send-message-form__user-email-input')) {
-          if(!/[a-zA-Z0-9]+@[a-z0-9]+\.[a-z]{1,12}$/.test(userEmailInput.value.trim())) {
+          if(!/^[a-zA-Z0-9]+@[a-z0-9]+\.[a-z]{1,12}$/.test(userEmailInput.value.trim())) {
             inputItem.classList.add('error-validate');
             inputItem.nextElementSibling.innerHTML = "Nieprawidłowy format adresu e-mail.";
           } else {
