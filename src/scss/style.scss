@@ -293,7 +293,8 @@
       border-color: $red;
 
       &+.error-validate-input-message {
-        display: block;
+        height: 17px;
+        opacity: 1;
       }
     }
   }
@@ -324,10 +325,13 @@
 }
 
 .error-validate-input-message {
-  display: none;
+  display: block;
+  height: 0;
   font-size: 0.9rem;
   color: $red;
   text-align: left;
+  opacity: 0;
+  transition: height .2s, opacity .2s;
 }
 
 //V. FOOTER
