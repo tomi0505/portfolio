@@ -194,7 +194,7 @@
   }
 
   &__img-container {
-    margin: 30px;
+    margin: 30px 25px;
     flex-basis: 474px;
     max-width: 552px;
     flex-grow: 1;
@@ -213,7 +213,7 @@
   }
 
   &__description-container {
-    margin: 30px;
+    margin: 30px 25px;
     flex-basis: 474px;
     max-width: 552px;
     flex-grow: 1;
@@ -231,12 +231,12 @@
 
   &__preview-link,
   &__github-link {
+    @include reset(a);
     margin: 5px;
     padding: 7px 15px;
     display: inline-block;
     color: $white;
     font-weight: 300;
-    text-decoration: none;
     border: 1px solid $black;
     background-color: $black;
     transition: .2s;
@@ -256,11 +256,29 @@
 .send-message-form {
   @include flex(center, flex-start);
 
+  @include rwd(1047px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__row {
     margin: 25px 15px;
     flex-basis: 474px;
     max-width: 552px;
     flex-grow: 1;
+
+    @include rwd(1047px) {
+      flex-basis: 0;
+      width: 100%;
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(2){
+        margin-top: 0;
+      }
+    }
   }
 
   &__user-name-input,
@@ -271,6 +289,7 @@
     display: block;
     width: 100%;
     height: 30px;
+    font-size: 0.9rem;
     border: 1px solid $black;
   }
 
@@ -279,7 +298,12 @@
     margin: 10px 0;
     padding: 17px;
     width: 100%;
+    font-size: 0.9rem;
     border: 1px solid $black;
+
+    @include rwd(1047px) {
+      @include my();
+    }
   }
 
   &__send-message-btn {
@@ -287,6 +311,26 @@
     margin: 10px 0 10px auto;
     padding: 7px 15px;
     display: block;
+    font-size: 0.9rem;
     border: 1px solid $black;
   }
+}
+
+//V. FOOTER
+.footer {
+  @include py(30px);
+  color: $white;
+  background-color: $dark-fiolet;
+}
+
+.social-icons-container {
+  @include flex();
+}
+
+.linkedin-icon,
+.github-icon {
+  @include reset(a);
+  @include mx(9px);
+  width: 30px;
+  color: $white;
 }
