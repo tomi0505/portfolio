@@ -10,10 +10,11 @@
   height: calc(var(--vh, 1vh) * 100);
   font-size: 2.1rem;
   color: $white;
-  background-image: url(../img/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: inset 0 0 0 1000px rgba($dark-fiolet, .4);
+  //background-image: url(../img/bg.jpg);
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  //box-shadow: inset 0 0 0 1000px rgba($dark-blue-color, .4);
+  background-color: $dark-blue-color;
   overflow: hidden;
 }
 
@@ -33,6 +34,10 @@
   border: 1px solid $white;
   transition: .2s;
 
+  &:hover {
+    border-color: $green-color;
+  }
+
   &:hover::after {
     transform: rotate(90deg);
   }
@@ -48,14 +53,14 @@
 
 .section-simple {
   &:nth-child(even) {
-    background-color: pink;
+    background-color: $grey-color;
   }
 }
 
 //II. ABOUT-ME
 %simple-section-template-css {
   margin: 0 auto;
-  padding-top: 30px;
+  padding: 35px 0;
   max-width: 1366px;
   overflow: hidden;
 }
@@ -76,10 +81,8 @@
 }
 
 .main-section-title {
-  $my-plus: 20px;
-  margin-top: $my-plus;
-  margin-bottom: 30px+$my-plus;
-  padding: 7px 17px;
+  margin-top: 10px;
+  margin-bottom: 35px;
   display: inline-block;
   font-size: 1.6rem;
   opacity: 0;
@@ -87,11 +90,11 @@
   transition: .7s ease-in-out;
 
   &--less-mb {
-    margin-bottom: 45px;
+    margin-bottom: 25px;
   }
 
   &--medium-mb {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   &::after {
@@ -181,9 +184,16 @@
     height: 28px;
     background-color: $grey-color;
 
+    &::-webkit-progress-bar {
+      appearance: none;
+      width: 100%;
+      height: 28px;
+      background-color: $grey-color;
+    }
+
     &::-webkit-progress-value {
-      background-color: $green-darken10-color;
-      transition: width 1s 1.5s;
+      background-color: $green-color-dark;
+      transition: width 1s .7s;
     }
   }
 }
@@ -249,16 +259,16 @@
     margin: 5px;
     padding: 7px 15px;
     display: inline-block;
-    color: $white;
+    color: $green-color;
     letter-spacing: 1px;
     font-weight: 300;
-    border: 1px solid $black;
-    background-color: $black;
+    border: 1px solid $green-color;
+    //background-color: $black;
     transition: .2s;
 
     &:hover {
-      color: $black;
-      background-color: transparent;
+      color: $white;
+      background-color: $green-color;
     }
   }
 }
@@ -334,7 +344,7 @@
 
   &__send-message-btn {
     @include reset(btn);
-    margin: 10px 0 10px auto;
+    margin: 10px 0 0 auto;
     padding: 7px 15px;
     display: block;
     font-family: $page-initial-font;
@@ -357,7 +367,7 @@
 .footer {
   @include py(30px);
   color: $white;
-  background-color: $dark-fiolet;
+  background-color: $dark-blue-color;
 }
 
 .social-icons-container {
@@ -388,13 +398,18 @@
 
 .scroll-to-top-btn {
   @include reset(a);
-  margin-top: 23px;
+  margin-top: 24px;
   padding: 7px 11px;
   display: inline-block;
   font-size: 0.9rem;
   color: $white;
   border: 1px solid $white;
+  transition: .2s;
   opacity: .6;
+
+  &:hover {
+    opacity: .5;
+  }
 
   &::after {
     content: url("../img/svg/arrow-right.svg");

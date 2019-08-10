@@ -11,8 +11,15 @@ $breakpoints: (
 // COLORS
 $black: #000000;
 $white: #ffffff;
-
 $red: #ff0000;
+
+
+$dark-blue-color: #2F3438;
+$green-color: #7AABA8;
+$green-color-dark: darken($green-color, 17);
+
+$red-color: #891F00;
+
 
 $dark-bg-color: rgb(67,65,84);
 $headers-text-color: #8a8a8a;
@@ -23,7 +30,7 @@ $grey-dark: rgb(116,111,121);
 $dark: rgb(19,10,13);
 
 
-$grey-color: #e3e3e3;
+$grey-color: #EFEFEF;
 
 $dark-fiolet: #252934;
 $fiolet: #344880;
@@ -35,10 +42,6 @@ $light-blue: #3A6C96;
 $red: rgb(220, 20, 60);
 $cadetblue-color: rgb(95, 150, 160);
 $gold-light-color: rgb(255, 228, 196);
-
-
-$green-color: #6E8954;
-$green-darken10-color: darken($green-color, 10);
 
 //FONTS
 $page-initial-font: 'Raleway', sans-serif;

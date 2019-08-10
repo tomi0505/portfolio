@@ -15,9 +15,7 @@ const slideToCenterAnimation = function() {
     if(skillsContainerElRect.top < window.innerHeight - informationAboutMeElRect.height/2) {
       skillsContainerEl.classList.add('animate-to-visible');
 
-      setTimeout(() => {
-        setSkillsBarsValue();
-      }, 200);
+      setSkillsBarsValue();
     }
   };
 
