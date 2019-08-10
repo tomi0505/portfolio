@@ -1,12 +1,13 @@
 const slideToTopAnimation = function() {
   const portfolioProjectsImgsContainerEl = document.querySelectorAll('.portfolio-project__img-container');
+  const descriptionContainersEl = document.querySelectorAll('.portfolio-project__description-container');
 
   const startSlideToTopAnimation = () => {
-    for(let portfolioProjectImgContainerElItem of portfolioProjectsImgsContainerEl) {
-      const portfolioProjectImgContainerElItemRect = portfolioProjectImgContainerElItem.getBoundingClientRect();
+    for(let descriptionContainersElItem of descriptionContainersEl) {
+      const descriptionContainersElItemRect = descriptionContainersElItem.getBoundingClientRect();
 
-      if(portfolioProjectImgContainerElItemRect.top < window.innerHeight - portfolioProjectImgContainerElItemRect.height/2) {
-        portfolioProjectImgContainerElItem.classList.add('animate-to-visible');
+      if(descriptionContainersElItemRect.top < window.innerHeight) {
+        descriptionContainersElItem.previousElementSibling.classList.add('animate-to-visible');
       }
     }
   };
