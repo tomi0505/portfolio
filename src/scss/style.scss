@@ -10,10 +10,8 @@
   height: calc(var(--vh, 1vh) * 100);
   font-size: 2.1rem;
   color: $white;
-  //background-image: url(../img/bg.jpg);
-  //background-repeat: no-repeat;
-  //background-size: cover;
-  //box-shadow: inset 0 0 0 1000px rgba($dark-blue-color, .4);
+  background-image: url("../img/bg-stardust.png");
+  background-size: cover;
   background-color: $dark-blue-color;
   overflow: hidden;
 }
@@ -441,12 +439,16 @@
     opacity: .9;
   }
 
+  &:hover::after {
+    transform: rotate(-90deg);
+  }
+
   &::after {
     content: url("../img/svg/arrow-right.svg");
     margin-left: 9px;
     display: inline-block;
     width: 0.8em;
-    transform: rotate(-90deg);
+    transition: transform .4s;
   }
 }
 
