@@ -11,10 +11,17 @@
 
 html {
   font-size: 16px;
+
+  @include rwd(tablet) {
+    font-size: 15px;
+  }
+
+  @include rwd(medium) {
+    font-size: 14px;
+  }
 }
 
 body {
   font-family: $page-initial-font;
   text-align: center;
-  //background-color: $grey-color;
 }

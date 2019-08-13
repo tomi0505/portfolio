@@ -137,6 +137,11 @@
     width: 179px;
     height: 179px;
     clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+
+    @include rwd(medium) {
+      width: 165px;
+      height: 165px;
+    }
   }
 
   &__description-photo {
@@ -174,6 +179,10 @@
     line-height: 28px;
     letter-spacing: 1px;
     background-color: $green-color;
+
+    @include rwd(medium) {
+      width: 145px;
+    }
   }
 
   &__progress {
@@ -232,6 +241,10 @@
 
   &__img {
     max-width: 100%;
+
+    @include rwd(medium) {
+      transform: scale(0.8);
+    }
   }
 
   &__description-container {
@@ -240,6 +253,11 @@
     max-width: 552px;
     flex-grow: 1;
     transition: .4s ease-in-out;
+
+    @include rwd(medium) {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
   }
 
   &__title {
@@ -279,6 +297,7 @@
 }
 
 .send-message-form {
+  margin: 0 25px;
   @include flex(center, flex-start);
 
   @include rwd(1047px) {
@@ -439,16 +458,12 @@
     opacity: .9;
   }
 
-  &:hover::after {
-    transform: rotate(-90deg);
-  }
-
   &::after {
     content: url("../img/svg/arrow-right.svg");
     margin-left: 9px;
     display: inline-block;
     width: 0.8em;
-    transition: transform .4s;
+    transform: rotate(-90deg);
   }
 }
 
