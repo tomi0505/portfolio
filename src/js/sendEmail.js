@@ -91,17 +91,13 @@ const sendEmail = function() {
       fetch(sendMessageForm.getAttribute('action'), {
         method: 'POST',
         body: formData
-      }).then(function(res) {
-        if(res.ok) {
-          const response = res.json();
-          if(response.status === 'ok') {
+      }).then(res => res.json())
+        .then(res => {
+          if(res.status === 'ok') {
             replaceFormAfterSendMessage(true);
           } else {
             replaceFormAfterSendMessage(false);
           }
-        } else {
-          replaceFormAfterSendMessage(false);
-        }
       }).catch(res => {
         replaceFormAfterSendMessage(false);
       })

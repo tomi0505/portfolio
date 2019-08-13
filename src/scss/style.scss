@@ -16,8 +16,15 @@
   overflow: hidden;
 }
 
-.self-presentation {
-  line-height: 53px;
+.self-presentation-container {
+  margin: 25px;
+}
+
+.welcome-text {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 52px;
 }
 
 .view-my-works-btn {
@@ -27,7 +34,7 @@
   display: inline-block;
   line-height: normal;
   font-family: $page-initial-font;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: $white;
   border: 1px solid $white;
   transition: .2s;
@@ -400,6 +407,7 @@
 
   &__show-form-btn,
   &__mailto-link {
+    text-decoration: none;
     color: $green-color-dark;
   }
 
@@ -427,8 +435,12 @@
 .github-icon {
   @include reset(a);
   @include mx(9px);
-  width: 30px;
+  width: 29px;
   color: $white;
+
+  @include rwd(medium) {
+    width: 26px;
+  }
 }
 
 .copyright {
