@@ -14,6 +14,15 @@
   background-size: cover;
   background-color: $dark-blue-color;
   overflow: hidden;
+
+  &__nav {
+    @include pos(fixed);
+    width: 100%;
+    font-size: 1.2rem;
+    background-color: $dark-blue-color;
+    border-bottom: 1px solid lighten($green-color, 10);
+    z-index: 998;
+  }
 }
 
 .self-presentation-container {
@@ -23,7 +32,6 @@
 .welcome-text {
   font-size: 2rem;
   font-weight: 400;
-  letter-spacing: 1px;
   line-height: 52px;
 }
 
@@ -53,6 +61,30 @@
     display: inline-block;
     width: 0.7em;
     transition: transform .4s;
+  }
+}
+
+//MAIN-MENU
+.main-menu {
+  margin: 0 auto;
+  @include flex();
+  max-width: 1024px;
+
+  &__menu-item {
+    @include reset(li);
+    padding: 12px;
+    flex-grow: 1;
+  }
+
+  &__menu-link-item {
+    @include reset(a);
+    color: lighten($green-color, 10);
+    font-weight: 500;
+    transition: .2s;
+
+    &:hover {
+      color: lighten($green-color, 15);
+    }
   }
 }
 
@@ -184,7 +216,6 @@
     flex-shrink: 0;
     color: $white;
     line-height: 28px;
-    letter-spacing: 1px;
     background-color: $green-color;
 
     @include rwd(medium) {
@@ -283,7 +314,6 @@
     padding: 7px 15px;
     display: inline-block;
     color: $green-color;
-    letter-spacing: 1px;
     font-weight: 300;
     border: 1px solid $green-color;
     //background-color: $black;

@@ -53,7 +53,11 @@
   @if $tag == a {
       text-decoration: none;
       color: $black;
-  } @else if $tag == btn {
+  }
+  @else if $tag == li {
+    list-style-type: none;
+  }
+  @else if $tag == btn {
       border: none;
       background-color: transparent;
       cursor: pointer;
