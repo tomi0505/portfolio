@@ -1,5 +1,3 @@
-let menuIsVisible = false;
-
 const hamburgerBtn = function() {
   const hamburgerBtn = document.querySelector('.hamburger-btn');
   const mainMenu = document.querySelector('.main-menu');
@@ -12,15 +10,13 @@ const hamburgerBtn = function() {
     }, 400);
 
     mainMenu.classList.toggle('active');
-
-    if(!menuIsVisible) {
-      setTimeout(() => {
-        mainMenu.classList.add('reset-transition');
-      }, 2000);
-
-      menuIsVisible = true;
-    }
   }, false);
+
+  for(let mainMenuItem of mainMenu.children) {
+    mainMenuItem.addEventListener('click', function() {
+      hamburgerBtn.click();
+    }, false);
+  }
 };
 
 export default hamburgerBtn;
