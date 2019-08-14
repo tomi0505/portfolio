@@ -165,6 +165,12 @@
     margin: 51px 0;
     transform: translateX(-70px);
     opacity: 0;
+
+    @include rwd(medium) {
+      @media (orientation: landscape) {
+        @include my(20px);
+      }
+    }
   }
 
   &__menu-link-item {
