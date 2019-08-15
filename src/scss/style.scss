@@ -455,7 +455,7 @@
     border: 1px solid $black;
 
     &:focus {
-      border-color: $green-color;
+      border-width: 2px;
     }
 
     &.error-validate {
@@ -490,13 +490,12 @@
     @include flex();
     font-family: $page-initial-font;
     font-size: 0.9rem;
-    border: 1px solid $black;
+    border: 1px solid $dark-blue-color;
     transition: .2s;
 
     &:hover {
       color: $white;
-      border-color: $green-color;
-      background-color: $green-color;
+      background-color: $dark-blue-color;
     }
 
     &--send-start {
@@ -507,8 +506,8 @@
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        border: 2px solid rgba(255,255,255, 0.2);
-        border-right-color: rgba(255,255,255,0.7);
+        border: 2px solid rgba(255,255,255,0.4);
+        border-right-color: rgba(255,255,255,1);
         animation: circleLoadAnimation .4s infinite;
       }
     }
