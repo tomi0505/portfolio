@@ -9,7 +9,8 @@ const replaceFormAfterSendMessage = success => {
 
   const alertForUser = {
     success,
-    successAlert: 'Twoja wiadomość została wysłana pomyślnie.',
+    successAlert: `
+      Twoja wiadomość została wysłana pomyślnie.<br><a href="#" class="after-send-message-alert__show-form-btn after-send-message-alert__show-form-btn--dark-color" role="button">Wyślij nową wiadomość.</a>`,
     errorAlert: `
       Coś poszło nie tak.<br><a href="#" class="after-send-message-alert__show-form-btn" role="button">Spróbuj wysłać formularz ponownie.</a><br>
       lub wyślij wiadomość na adres:<br><a href="mailto:${myEmail}" class="after-send-message-alert__mailto-link">${myEmail}</a>`

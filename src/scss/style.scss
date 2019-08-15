@@ -35,7 +35,7 @@
 
 .scroll-down-btn {
   margin-bottom: 12px;
-  width: 24px;
+  width: 25px;
   transform: rotate(90deg);
 }
 
@@ -43,11 +43,17 @@
 .hamburger-btn-container {
   @include pos(fixed, 12px, auto, 15px);
   @include flex();
-  width: 57px+5;
-  height: 39px+5;
+  width: 62px;
+  height: 44px;
   clip-path: polygon(0 0, 75% 0, 100% 25%, 100% 100%, 25% 100%, 0 75%);
   background-color: rgba($green-color-dark, var(--hamburgerBtnContainerOpacityValue));
   z-index: 999;
+
+  @include rwd(medium) {
+    top: 9px;
+    right: 12px;
+    width: 58px;
+  }
 }
 
 .hamburger-btn {
@@ -83,6 +89,11 @@
     height: 3px;
     background-color: $white;
     transition: top .4s, opacity .4s, transform .4s .4s;
+
+    @include rwd(medium) {
+      left: 3px;
+      width: 32px;
+    }
 
     &:first-child {
       top: 0;
@@ -525,6 +536,7 @@
 }
 
 .after-send-message-alert {
+  margin: 0 25px;
   font-weight: 500;
   line-height:  26px;
 
@@ -532,6 +544,10 @@
   &__mailto-link {
     text-decoration: none;
     color: $green-color-dark;
+
+    &--dark-color {
+      color: $black;
+    }
   }
 
   &.success-send-message {
