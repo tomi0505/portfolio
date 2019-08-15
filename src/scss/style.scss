@@ -4,7 +4,7 @@
 @import 'settings';
 
 .header {
-  @include flex();
+  @include flex(space-between);
   flex-direction: column;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
@@ -22,43 +22,21 @@
   }
 }
 
-.self-presentation-container {
-  margin: 25px;
-}
-
 .welcome-text {
-  font-size: 2rem;
-  font-weight: 400;
+  margin: 25px;
+  font-size: 2.1rem;
+  font-weight: 500;
   line-height: 52px;
+
+  &__awards {
+    color: $green-color;
+  }
 }
 
-.view-my-works-btn {
-  @include reset(a);
-  margin-top: 29px;
-  padding: 11px;
-  display: inline-block;
-  line-height: normal;
-  font-family: $page-initial-font;
-  font-size: 1.1rem;
-  color: $white;
-  border: 1px solid $white;
-  transition: .2s;
-
-  &:hover {
-    border-color: $green-color;
-  }
-
-  &:hover::after {
-    transform: rotate(90deg);
-  }
-
-  &::after {
-    content: url("../img/svg/arrow-right.svg");
-    margin-left: 9px;
-    display: inline-block;
-    width: 0.7em;
-    transition: transform .4s;
-  }
+.scroll-down-btn {
+  margin-bottom: 12px;
+  width: 24px;
+  transform: rotate(90deg);
 }
 
 //HAMBURGER-BTN
@@ -225,10 +203,18 @@
 
   &--less-mb {
     margin-bottom: 25px;
+
+    @include  rwd(medium) {
+      margin-bottom: 4px;
+    }
   }
 
   &--medium-mb {
     margin-bottom: 20px;
+
+    @include  rwd(medium) {
+      margin-bottom: 25px;
+    }
   }
 
   &::after {
