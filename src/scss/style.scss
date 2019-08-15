@@ -463,10 +463,12 @@
     width: 100%;
     font-family: $page-initial-font;
     font-size: 0.9rem;
-    border: 1px solid $black;
+    color: $green-color-dark;
+    border: 1px solid $green-color-dark;
 
     &:focus {
       border-width: 2px;
+      border-color: $green-color-dark;
     }
 
     &.error-validate {
@@ -501,12 +503,13 @@
     @include flex();
     font-family: $page-initial-font;
     font-size: 0.9rem;
-    border: 1px solid $dark-blue-color;
+    color: $green-color-dark;
+    border: 1px solid $green-color-dark;
     transition: .2s;
 
     &:hover {
       color: $white;
-      background-color: $dark-blue-color;
+      background-color: $green-color-dark;
     }
 
     &--send-start {
@@ -517,9 +520,14 @@
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        border: 2px solid rgba(255,255,255,0.4);
-        border-right-color: rgba(255,255,255,1);
+        border: 2px solid rgba($green-color-dark,0.4);
+        border-right-color: rgba($green-color-dark,1);
         animation: circleLoadAnimation .4s infinite;
+      }
+
+      &:hover::after {
+        border: 2px solid rgba($white,0.4);
+        border-right-color: rgba($white,1);
       }
     }
   }
