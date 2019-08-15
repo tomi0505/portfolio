@@ -220,7 +220,13 @@
               <textarea name="user-message" cols="30" rows="10" class="send-message-form__user-message-input"
                         placeholder="Wiadomość..."></textarea>
               <span class="error-validate-input-message">To pole zostało wypełnione nieprawidłowo.</span>
-              <button class="send-message-form__send-message-btn">Wyślij</button>
+              <div class="send-message-form__regulations-before-send-message-container">
+                <div class="send-message-form__accept-regulations-container">
+                  <input type="checkbox" name="accept-regulations" class="send-message-form__accept-regulations-input" id="acceptRegulationsInput">
+                  <label for="acceptRegulationsInput" class="send-message-form__accept-regulations-description">Akceptuję regulamin</label>
+                </div>
+                <button class="send-message-form__send-message-btn">Wyślij</button>
+              </div>
             </div>
           </form>
         </div>

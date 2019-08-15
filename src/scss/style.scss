@@ -509,9 +509,22 @@
     }
   }
 
+  &__regulations-before-send-message-container {
+    margin-top: 10px;
+    @include flex(flex-end);
+  }
+
+  &__accept-regulations-container {
+    margin-right: 40px;
+  }
+
+  &__accept-regulations-input,
+  &__accept-regulations-description {
+    cursor: pointer;
+  }
+
   &__send-message-btn {
     @include reset(btn);
-    margin: 10px 0 0 auto;
     padding: 7px 15px;
     @include flex();
     font-family: $page-initial-font;
