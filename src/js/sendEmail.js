@@ -30,14 +30,12 @@ const replaceFormAfterSendMessage = success => {
   sendMessageBtn.disabled = false;
   sendMessageBtn.classList.remove('send-message-form__send-message-btn--send-start');
 
-  if(!alertForUser.success) {
-    // SHOW FORM/BACK REPLACE THE FORM
-    const replaceAfterSendMessageAlertEl = document.querySelector('.after-send-message-alert__show-form-btn');
-    replaceAfterSendMessageAlertEl.addEventListener('click', function(e) {
-      e.preventDefault();
-      afterSendMessageAlertEl.parentNode.replaceChild(sendMessageForm, afterSendMessageAlertEl);
-    }, false);
-  }
+  // SHOW FORM/BACK REPLACE THE FORM
+  const replaceAfterSendMessageAlertEl = document.querySelector('.after-send-message-alert__show-form-btn');
+  replaceAfterSendMessageAlertEl.addEventListener('click', function(e) {
+    e.preventDefault();
+    afterSendMessageAlertEl.parentNode.replaceChild(sendMessageForm, afterSendMessageAlertEl);
+  }, false);
 };
 
 const sendEmail = function() {
@@ -94,10 +92,16 @@ const sendEmail = function() {
         body: formData
       }).then(res => res.json())
         .then(res => {
-          if(res.status === 'ok') {
-            replaceFormAfterSendMessage(true);
-          } else {
+          if(res.errors) {
             replaceFormAfterSendMessage(false);
+          } else {
+            if(res.status === 'ok') {
+              replaceFormAfterSendMessage(true);
+            }
+
+            if(res.status === 'error') {
+              replaceFormAfterSendMessage(false);
+            }
           }
       }).catch(res => {
         replaceFormAfterSendMessage(false);

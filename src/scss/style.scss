@@ -25,7 +25,7 @@
 .welcome-text {
   margin: 25px;
   font-size: 2.1rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 52px;
 
   &__awards {
@@ -35,7 +35,7 @@
 
 .scroll-down-btn {
   margin-bottom: 12px;
-  width: 25px;
+  width: 24px;
   transform: rotate(90deg);
 }
 
@@ -317,17 +317,21 @@
     }
   }
 
-  &__progress {
+  %progress-bar {
     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     width: 100%;
     height: 28px;
+    border: none;
     background-color: $grey-color;
+  }
+
+  &__progress {
+    @extend %progress-bar;
 
     &::-webkit-progress-bar {
-      appearance: none;
-      width: 100%;
-      height: 28px;
-      background-color: $grey-color;
+      @extend %progress-bar;
     }
 
     &::-webkit-progress-value {
@@ -465,6 +469,14 @@
     font-size: 0.9rem;
     color: $green-color-dark;
     border: 1px solid $green-color-dark;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active  {
+      -webkit-text-fill-color: $green-color-dark !important;
+      -webkit-box-shadow: 0 0 0 30px $white inset !important;
+    }
 
     &:focus {
       border-width: 2px;
