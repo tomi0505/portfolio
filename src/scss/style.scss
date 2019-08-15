@@ -41,6 +41,7 @@
 
 //HAMBURGER-BTN
 .hamburger-btn-container {
+  @include reset(btn);
   @include pos(fixed, 12px, auto, 15px);
   @include flex();
   width: 62px;
