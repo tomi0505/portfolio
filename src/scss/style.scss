@@ -425,6 +425,15 @@
     font-size: 1.3rem;
   }
 
+  &__description {
+    line-height: 25px;
+  }
+
+  &__used-technologies {
+    display: block;
+    font-weight: 500;
+  }
+
   &__projects-links-container {
     margin-top: 12px;
   }
