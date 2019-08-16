@@ -24,13 +24,9 @@ const hamburgerBtn = function() {
   window.addEventListener('scroll', function() {
     const mainEl = document.querySelector('.main');
     const mainElRect = mainEl.getBoundingClientRect();
-
     const hamburgerBtnContainer = document.querySelector('.hamburger-btn-container');
-
-    // if(mainElRect.top - hamburgerBtnContainer.clientHeight < 0) {
-      let mainElToTopConfigure = (((mainElRect.top - hamburgerBtnContainer.clientHeight)*-1)/50).toFixed(1);
-      root.style.setProperty('--hamburgerBtnContainerOpacityValue', mainElToTopConfigure);
-    // }
+    let mainElToTopConfigure = (((mainElRect.top - hamburgerBtnContainer.clientHeight)*-1)/50).toFixed(1);
+    root.style.setProperty('--hamburgerBtnContainerOpacityValue', mainElToTopConfigure);
   }, false);
 };
 
