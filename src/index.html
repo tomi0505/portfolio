@@ -33,7 +33,7 @@
           </li>
         </ul>
       </nav>
-      <h1 class="welcome-text">Cześć, nazywam się Tomasz Grzyb.<br>Jestem Junior Front-End Developer-em.</h1>
+      <h1 class="welcome-text">Cześć, nazywam się Tomasz Grzyb.<br>Jestem Junior Frontend Developerem.</h1>
       <a href="#aboutMe" class="scroll-down-btn scroll" role="button" tabindex="0">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path></svg>
       </a>
@@ -92,9 +92,10 @@
                 <label for="skillsBOOTSTRAProgressBarItem" class="bar__name">BOOTSTRAP</label>
                 <progress value="0" max="100" class="bar__progress" id="skillsBOOTSTRAProgressBarItem">12%</progress>
               </div>
-              <div class="bar">
-                <label for="skillsREACTProgressBarItem" class="bar__name">REACT</label>
-                <progress value="0" max="100" class="bar__progress" id="skillsREACTProgressBarItem">1%</progress>
+              <div class="bar bar--other-skills">
+                <span class="bar__name bar__name--other-skills">NPM</span>
+                <span class="bar__name bar__name--other-skills">ZEPLIN</span>
+                <span class="bar__name bar__name--other-skills">WEBSTORM</span>
               </div>
             </div>
           </div>
@@ -194,7 +195,7 @@
               </div>
               <div class="portfolio-project__description-container">
                 <h3 class="portfolio-project__title">FOTKA SLIDER</h3>
-                <p class="portfolio-project__description">Aplikacja do przeglądania osób z portalu Fotka.pl</p>
+                <p class="portfolio-project__description">Aplikacja do przeglądania osób z portalu fotka.pl (JSON)</p>
                 <div class="portfolio-project__projects-links-container">
                   <a href="projects/jsy/JSON/fotka_slider" class="portfolio-project__preview-link" target="_blank">Pogląd</a>
                   <a href="https://github.com/tomi0505/fotka_slider" class="portfolio-project__github-link"
@@ -220,13 +221,7 @@
               <textarea name="user-message" cols="30" rows="10" class="send-message-form__user-message-input"
                         placeholder="Wiadomość..."></textarea>
               <span class="error-validate-input-message">To pole zostało wypełnione nieprawidłowo.</span>
-              <div class="send-message-form__regulations-before-send-message-container">
-                <div class="send-message-form__accept-regulations-container">
-                  <input type="checkbox" name="accept-regulations" class="send-message-form__accept-regulations-input" id="acceptRegulationsInput">
-                  <label for="acceptRegulationsInput" class="send-message-form__accept-regulations-description">Akceptuję regulamin</label>
-                </div>
-                <button class="send-message-form__send-message-btn">Wyślij</button>
-              </div>
+              <button class="send-message-form__send-message-btn">Wyślij</button>
             </div>
           </form>
         </div>

@@ -133,19 +133,19 @@
       opacity: 1;
 
       &:first-child {
-        transition: .4s .4s;
+        transition: .2s .4s;
       }
 
       &:nth-child(2) {
-        transition: .4s .8s;
+        transition: .2s .8s;
       }
 
       &:nth-child(3) {
-        transition: .4s 1.2s;
+        transition: .2s 1.2s;
       }
 
       &:last-child {
-        transition: .4s 1.6s;
+        transition: .2s 1.6s;
       }
     }
   }
@@ -296,7 +296,11 @@
 .bar {
   margin: 12px 0;
   @include flex(flex-start, stretch);
-  background-color: pink;
+
+  &--other-skills {
+    @include flex(flex-start);
+    flex-wrap: wrap;
+  }
 
   &:first-child {
     margin-top: 0;
@@ -316,6 +320,21 @@
     @include rwd(medium) {
       width: 145px;
     }
+
+    &--other-skills {
+      margin: 3px 5px 0;
+      padding: 0 9px;
+      display: inline-block;
+      width: auto;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 
   %progress-bar {
@@ -333,6 +352,10 @@
 
     &::-webkit-progress-bar {
       @extend %progress-bar;
+    }
+
+    &::-moz-progress-bar {
+      background-color: $green-color-dark !important;
     }
 
     &::-webkit-progress-value {
@@ -509,22 +532,9 @@
     }
   }
 
-  &__regulations-before-send-message-container {
-    margin-top: 10px;
-    @include flex(flex-end);
-  }
-
-  &__accept-regulations-container {
-    margin-right: 40px;
-  }
-
-  &__accept-regulations-input,
-  &__accept-regulations-description {
-    cursor: pointer;
-  }
-
   &__send-message-btn {
     @include reset(btn);
+    margin: 10px 0 0 auto;
     padding: 7px 15px;
     @include flex();
     font-family: $page-initial-font;
