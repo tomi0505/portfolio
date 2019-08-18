@@ -193,6 +193,10 @@
 .about-me {
   &__container {
     @extend %simple-section-template-css;
+
+    @include rwd(1047px) {
+      padding-bottom: 13px;
+    }
   }
 
   &__row {
