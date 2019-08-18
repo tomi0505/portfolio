@@ -1,8 +1,6 @@
-import setSkillsBarsValue from "./setSkillsBarsValue";
-
 const slideToCenterAnimation = function() {
   const informationAboutMeEl = document.querySelector('.information-about-me');
-  const skillsContainerEl = document.querySelector('.skills-container');
+  const skillsContainerEl = document.querySelector('.skills');
 
   const startslideToCenterAnimation = () => {
     const informationAboutMeElRect = informationAboutMeEl.getBoundingClientRect();
@@ -14,8 +12,6 @@ const slideToCenterAnimation = function() {
 
     if(skillsContainerElRect.top < window.innerHeight - informationAboutMeElRect.height/2) {
       skillsContainerEl.classList.add('animate-to-visible');
-
-      setSkillsBarsValue();
     }
   };
 
