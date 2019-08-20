@@ -29,7 +29,6 @@
   line-height: 52px;
 
   &__awards {
-    color: $green-color;
     font-weight: 500;
   }
 }
@@ -275,7 +274,7 @@
     margin-bottom: 28px;
     width: 179px;
     height: 179px;
-    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    border-radius: 50%;
 
     @include rwd(medium) {
       width: 165px;
@@ -307,7 +306,7 @@
   &__skills-item-svg-icon {
     margin: 0 22px 22px 0;
     width: 70px;
-    fill: $green-color-dark;
+    opacity: .8;
 
     @include rwd(tablet) {
       width: 65px;
@@ -591,7 +590,7 @@
 .github-icon {
   @include reset(a);
   @include mx(9px);
-  width: 29px;
+  width: 28px;
   color: $white;
 
   @include rwd(medium) {
