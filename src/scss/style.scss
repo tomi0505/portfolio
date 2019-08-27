@@ -300,29 +300,32 @@
     opacity: 1;
   }
 
-  &__skills-item-svg-icon {
+  &__item {
     margin: 0 22px 22px 0;
-    width: 70px;
-    opacity: .8;
+    position: relative;
+    @include flex();
+    width: 72px;
+    height: 72px;
+    font-size: 0.8rem;
+    color: $green-color-dark;
+    text-align: center;
+    line-height: 12px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    background-color: $green-color-dark;
 
-    @include rwd(tablet) {
-      width: 65px;
+    &--less-font {
+      font-size: 0.7rem;
     }
 
-    @include rwd(medium) {
-      width: 60px;
-    }
-
-    &--less-size {
-      width: 60px;
-
-      @include rwd(tablet) {
-        width: 55px;
-      }
-
-      @include rwd(medium) {
-        width: 50px;
-      }
+    &::before {
+      content: "";
+      @include pos(absolute, 1px, 1px);
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      background-color: $grey-color;
+      z-index: -1;
     }
   }
 }
