@@ -1,4 +1,5 @@
 import './scss/style.scss';
+import checkBrowser from "./js/checkBrowser";
 import chromeMobile100Vh from './js/chromeMobile100Vh';
 import hamburgerBtn from "./js/hamburgerBtn";
 import scrollToAnchor from "./js/scrollToAnchor";
@@ -9,6 +10,8 @@ import sendEmail from "./js/sendEmail";
 
 document.addEventListener("DOMContentLoaded", () => {
   const copyrightYearEl = document.querySelector('.copyright__year');
+
+  checkBrowser();
 
   chromeMobile100Vh();
   window.addEventListener('resize', chromeMobile100Vh, false);
