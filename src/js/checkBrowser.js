@@ -1,17 +1,8 @@
 const checkBrowser = function() {
-  var ua = window.navigator.userAgent;
-  var msie = ua.indexOf("MSIE ");
-
-  if (msie > 0) // If Internet Explorer, return version number
+  if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
   {
-    document.write(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
+    document.innerHTML = 'Twoja przeglądarka nie obsługuje tej strony internetowej. Skorzystaj proszę z przeglądarki <a href="http://www.google.com/intl/pl_pl/chrome">Chrome</a>.';
   }
-  else  // If another browser, return 0
-  {
-    console.log('otherbrowser');
-  }
-
-  return false;
 };
 
 export default checkBrowser;
