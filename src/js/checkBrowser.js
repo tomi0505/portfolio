@@ -3,7 +3,7 @@ const checkBrowser = function() {
   const isIE = /MSIE|Trident\//.test(ua);
   
   if (isIE) {
-    document.innerHTML = 'Twoja przeglądarka nie obsługuje nowoczesnych technologii. Pobierz <a href="http://www.google.com/intl/pl_pl/chrome">Chrome</a>.';
+    document.innerHTML = 'Twoja przeglądarka nie obsługuje nowoczesnych technologii webowych. Pobierz <a href="http://www.google.com/intl/pl_pl/chrome">Chrome</a>.';
   }
 };
 
