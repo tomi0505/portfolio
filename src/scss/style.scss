@@ -3,6 +3,10 @@
 @import 'keyframes';
 @import 'settings';
 
+.check-browser-alert {
+  text-align: left;
+}
+
 .header {
   @include flex(space-between);
   flex-direction: column;
