@@ -7,33 +7,31 @@ import slideToCenterAnimation from "./js/slideToCenterAnimation";
 import slideToTopAnimation from "./js/slideToTopAnimation";
 import sendEmail from "./js/sendEmail";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const copyrightYearEl = document.querySelector('.copyright__year');
+if(isIE()) {
+  document.innerHTML = '<aside class="check-browser-alert"><p>Twoja przeglądarka nie obsługuje nowoczesnych technologii webowych. Pobierz <a href="http://www.google.com/intl/pl_pl/chrome">Chrome</a>.</p></aside>';
+} else {
+  document.addEventListener("DOMContentLoaded", () => {
+    const copyrightYearEl = document.querySelector('.copyright__year');
 
-  (function() {
-    function isIE() {
-      var ua = window.navigator.userAgent;
-      var msie = ua.indexOf('MSIE ');
-      var trident = ua.indexOf('Trident/');
+    chromeMobile100Vh();
+    window.addEventListener('resize', chromeMobile100Vh, false);
 
-      return (msie > 0 || trident > 0);
-    }
+    hamburgerBtn();
 
-    if(isIE()) {
-      document.innerHTML = '<aside class="check-browser-alert"><p>Twoja przeglądarka nie obsługuje nowoczesnych technologii webowych. Pobierz <a href="http://www.google.com/intl/pl_pl/chrome">Chrome</a>.</p></aside>';
-    }
-  }());
+    copyrightYearEl.innerHTML = new Date().getFullYear();
 
-  chromeMobile100Vh();
-  window.addEventListener('resize', chromeMobile100Vh, false);
+    scrollToAnchor();
+    slideToLeftAnimation();
+    slideToCenterAnimation();
+    slideToTopAnimation();
+    sendEmail();
+  }, false)
+}
 
-  hamburgerBtn();
+function isIE() {
+  var ua = window.navigator.userAgent;
+  var msie = ua.indexOf('MSIE ');
+  var trident = ua.indexOf('Trident/');
 
-  copyrightYearEl.innerHTML = new Date().getFullYear();
-
-  scrollToAnchor();
-  slideToLeftAnimation();
-  slideToCenterAnimation();
-  slideToTopAnimation();
-  sendEmail();
-}, false);
+  return (msie > 0 || trident > 0);
+}
