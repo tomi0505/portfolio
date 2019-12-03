@@ -10,7 +10,6 @@ function isIE() {
 if (isIE()) {
   document.body.innerHTML = '<div class="check-browser-alert"><p>Twoja przeglądarka nie obsługuje nowoczesnych technologii webowych. Pobierz <a href="http://www.google.com/intl/pl_pl/chrome">Chrome</a>.</p></div>';
 } else {
-  console.log('works');
   const portfolioJS = document.createElement('script');
   portfolioJS.setAttribute('type', 'text/javascript');
   portfolioJS.setAttribute('src', 'bundle.js');
