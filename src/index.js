@@ -6,6 +6,7 @@ import slideToLeftAnimation from "./js/slideToLeftAnimation";
 import slideToCenterAnimation from "./js/slideToCenterAnimation";
 import slideToTopAnimation from "./js/slideToTopAnimation";
 import sendEmail from "./js/sendEmail";
+import particles from "./js/particlesJS";
 
 document.addEventListener("DOMContentLoaded", () => {
   const copyrightYearEl = document.querySelector('.copyright__year');
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   copyrightYearEl.innerHTML = new Date().getFullYear();
 
+  particles();
   scrollToAnchor();
   slideToLeftAnimation();
   slideToCenterAnimation();
