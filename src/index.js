@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   copyrightYearEl.innerHTML = new Date().getFullYear();
 
-  particles();
+  // particles();
   scrollToAnchor();
   slideToLeftAnimation();
   slideToCenterAnimation();
