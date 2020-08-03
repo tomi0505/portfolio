@@ -280,13 +280,13 @@
 
   &__author-photo {
     margin-bottom: 28px;
-    width: 149px;
-    height: 149px;
-    // clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    width: 179px;
+    height: 179px;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 
     @include rwd(medium) {
-      width: 115px;
-      height: 115px;
+      width: 165px;
+      height: 165px;
     }
   }
 
